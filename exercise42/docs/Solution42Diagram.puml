@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Solution42
+{
+    +{static}Solution41 : main()
+    -{static}Solution41 : input()
+    -{static}Solution41 : output(ArrayList<String> list)
+}
+
+@enduml
