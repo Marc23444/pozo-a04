@@ -5,9 +5,9 @@ class Solution43
 {
     +{static}Solution43 : main()
     -{static}Solution43 : input()
-    -{static}Solution43 : jsFolder()
-    -{static}Solution43 : cssFolder()
-    -{static}Solution43 : createHTMLFile(String siteName String author)
+    -{static}Solution43 : jsFolder(String path)
+    -{static}Solution43 : cssFolder(String path)
+    -{static}Solution43 : createHTMLFile(String siteName, String author, String path)
 }
 
 @enduml

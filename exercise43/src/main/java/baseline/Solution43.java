@@ -18,35 +18,78 @@
  */
 package baseline;
 
+import java.io.File;
+import java.util.Scanner;
+
 public class Solution43 {
 
     //Driver function, used to run input
     public static void main(String[] args) {
-
+        input();
     }
 
     //Takes input through a scanner, will call all other functions based on input
     private static void input()
     {
+        Scanner in = new Scanner(System.in);
+        String name, author, choice, pathname;
+
+
+
+        System.out.println("Site name: ");
+        name = in.nextLine();
+
+        pathname = "data\\website\\" + name;
+        File directory = new File(pathname);
+
+        if(!directory.exists())
+        {
+            directory.mkdirs();
+        }
+
+
+        System.out.println("Author: ");
+        author = in.nextLine();
+
+        System.out.println("Do you want a folder for JavaScript?");
+        choice = in.nextLine();
+
+        if(choice.equals("y"))
+            jsFolder(pathname);
+
+        System.out.println("Do you want a folder for CSS?");
+        choice = in.nextLine();
+
+        if(choice.equals("y"))
+            cssFolder(pathname);
+
 
     }
 
     //Creates a folder inside the main folder called js
-    private static void jsFolder()
+    private static void jsFolder(String path)
     {
+        File jsFolderDir = new File(path + "\\js");
+
+        if(!jsFolderDir.exists())
+            jsFolderDir.mkdirs();
 
     }
 
     //Creates a folder inside the main folder called css
-    private static void cssFolder()
+    private static void cssFolder(String path)
     {
+        File cssFolderDir = new File(path + "\\css");
+
+        if(!cssFolderDir.exists())
+            cssFolderDir.mkdirs();
 
     }
 
     //Creates and writes to the index.html file and places it in the main folder
-    public static void createHTMLFile(String siteName, String author)
+    public static void createHTMLFile(String siteName, String author, String path)
     {
-
+        
     }
 
 }
