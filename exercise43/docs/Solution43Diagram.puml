@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Solution43
+{
+    +{static}Solution43 : main()
+    -{static}Solution43 : input()
+    -{static}Solution43 : jsFolder()
+    -{static}Solution43 : cssFolder()
+    -{static}Solution43 : createHTMLFile(String siteName String author)
+}
+
+@enduml
