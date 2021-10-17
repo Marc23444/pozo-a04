@@ -1,6 +1,12 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-
+class Solution45
+{
+        +{static}Solution45 : main()
+        -{static}Solution45 : fileIn()
+        -{static}Solution45 : checkString(String[] words)
+        -{static}Solution45 : fileOut(String[] words)
+}
 
 @enduml
