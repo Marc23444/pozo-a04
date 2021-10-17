@@ -1,19 +1,19 @@
 package baseline;
 
 import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-
-public class Solution41Test {
+class Solution41Test {
 
     @Test
-    void sortTest() {
-
+    void sort() {
         Solution41 testObject = new Solution41();
 
+        //Creating the testList
         ArrayList<String> testList = new ArrayList<>();
-
         testList.add("Ling, Mai");
         testList.add("Johnson, Jim");
         testList.add("Zarnecki, Sabrina");
@@ -22,6 +22,7 @@ public class Solution41Test {
         testList.add("Swift, Geoffrey");
         testList.add("Xiong, Fong");
 
+        //Creating the correct fully sorted list
         ArrayList<String> correctList = new ArrayList<>();
         correctList.add("Johnson, Jim");
         correctList.add("Jones, Aaron");
@@ -31,11 +32,10 @@ public class Solution41Test {
         correctList.add("Xiong, Fong");
         correctList.add("Zarnecki, Sabrina");
 
-        //Make the sort function public and non static to test
-        //testList = testObject.sort(testList);
+
+        testList = testObject.sort(testList);
 
         assertEquals(correctList,testList);
-
 
 
 

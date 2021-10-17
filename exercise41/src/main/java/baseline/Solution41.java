@@ -54,8 +54,8 @@ public class Solution41 {
     }
 
     //Sorts the data using a nested for loop and sends the sorted data to output
-    //THIS IS ONLY PUBLIC IN THE FIRST COMMIT FOR TESTING PURPOSES
-    private static ArrayList<String> sort(ArrayList<String> list)
+    //THIS IS ONLY PUBLIC FOR TESTING PURPOSES
+    public static ArrayList<String> sort(ArrayList<String> list)
     {
         String temp;
         for (int i = 0; i < list.size() ; i++) {
@@ -78,15 +78,14 @@ public class Solution41 {
     private static void output(ArrayList<String> sortedList)
     {
         //Try catch block is used to write to the file using a FileWriter
-        try
+        try(FileWriter myWriter = new FileWriter("data\\exercise41_output.txt"))
         {
-            FileWriter myWriter = new FileWriter("data\\exercise41_output.txt");
+
             myWriter.write("Total of "+sortedList.size()+" names\n-----------------\n");
 
             for (String s : sortedList) {
                 myWriter.write(s+"\n");
             }
-            myWriter.close();
 
         }catch (IOException e)
         {

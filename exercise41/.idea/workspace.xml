@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="837fb2d0-b93b-43ba-bdbf-f48d06908211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/baseline/Solution41.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baseline/Solution41.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baseline/Solution41Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baseline/Solution41Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise43/src/test/java/baseline/Solution43Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise44/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise44/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise44/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise44/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise44/src/main/java/baseline/Solution44.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise44/src/main/java/baseline/Solution44.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise45/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise45/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise46/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise46/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +79,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Gradle.exercise41 [run]">
     <configuration name="exercise41 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -136,5 +141,17 @@
       <updated>1634245071605</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
