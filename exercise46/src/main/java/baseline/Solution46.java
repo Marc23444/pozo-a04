@@ -8,8 +8,10 @@
         -This string is then split at each space to create a list of words
     -This list of words is then sent to a function called checkWords which will keep track of the
     total number of each word
+        -It will do this using maps, each word will be a key and the number of times that word appears
+        will be the value
     -This data is then sent to a function called output
-        -The data is then displayed as a histogram
+        -The data is then displayed as a histogram after being converted to a list of keys and values
  */
 package baseline;
 
