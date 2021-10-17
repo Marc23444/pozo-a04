@@ -19,6 +19,7 @@
 package baseline;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.util.Scanner;
 
 public class Solution43 {
@@ -32,9 +33,11 @@ public class Solution43 {
     private static void input()
     {
         Scanner in = new Scanner(System.in);
-        String name, author, choice, pathname;
-
-
+        String name;
+        String author;
+        String choiceJS;
+        String choiceCSS;
+        String pathname;
 
         System.out.println("Site name: ");
         name = in.nextLine();
@@ -42,9 +45,9 @@ public class Solution43 {
         pathname = "data\\website\\" + name;
         File directory = new File(pathname);
 
-        if(!directory.exists())
+        if(!directory.mkdirs())
         {
-            directory.mkdirs();
+            System.out.println("Directory Creation failed.");
         }
 
 
@@ -52,18 +55,28 @@ public class Solution43 {
         author = in.nextLine();
 
         System.out.println("Do you want a folder for JavaScript?");
-        choice = in.nextLine();
+        choiceJS = in.nextLine();
 
-        if(choice.equals("y"))
+        if(choiceJS.equals("y"))
             jsFolder(pathname);
 
         System.out.println("Do you want a folder for CSS?");
-        choice = in.nextLine();
+        choiceCSS = in.nextLine();
 
-        if(choice.equals("y"))
+        if(choiceCSS.equals("y"))
             cssFolder(pathname);
 
+        createHTMLFile(name,author,pathname);
 
+        String outputStatement = "Created ./website/";
+
+        System.out.println(outputStatement+name);
+        System.out.println(outputStatement+name+"/index.html");
+        if(choiceJS.equals("y"))
+            System.out.println(outputStatement+name+"/js/");
+
+        if(choiceCSS.equals("y"))
+            System.out.println(outputStatement+name+"/css/");
     }
 
     //Creates a folder inside the main folder called js
@@ -71,8 +84,10 @@ public class Solution43 {
     {
         File jsFolderDir = new File(path + "\\js");
 
-        if(!jsFolderDir.exists())
-            jsFolderDir.mkdirs();
+        if(!jsFolderDir.mkdirs())
+        {
+            System.out.println("Directory Creation failed.");
+        }
 
     }
 
@@ -81,14 +96,28 @@ public class Solution43 {
     {
         File cssFolderDir = new File(path + "\\css");
 
-        if(!cssFolderDir.exists())
-            cssFolderDir.mkdirs();
-
+        if(!cssFolderDir.mkdirs())
+        {
+            System.out.println("Directory Creation failed.");
+        }
     }
 
     //Creates and writes to the index.html file and places it in the main folder
     public static void createHTMLFile(String siteName, String author, String path)
     {
+        //Creates the html file and inserts the html code
+        File htmlFile = new File(path+"\\index.html");
+        try(FileWriter myWriter = new FileWriter(htmlFile))
+        {
+            if(!htmlFile.exists())
+                System.out.println("File already exists");
+            myWriter.write("<title>"+siteName+"</title><meta name=\"author\" content=\""+author+"\">");
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
     }
 
