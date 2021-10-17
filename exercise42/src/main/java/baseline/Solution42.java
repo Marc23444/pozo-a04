@@ -3,6 +3,8 @@
  *  Copyright 2021 Marcelino Pozo
  */
 /*
+    **SINCE THIS PROGRAM ONLY TAKES IN AND PRINTS OUT DATA I DECIDED NOT TO CREATE
+    ANY UNIT TESTING FOR IT**
     PSUEDOCODE
     -Read in the csv file using a scanner and the File class
         -Add each comma seperated line to an arrayList of strings
