@@ -89,7 +89,7 @@ public class Solution43 {
     //Creates and writes to the index.html file and places it in the main folder
     public static void createHTMLFile(String siteName, String author, String path)
     {
-        
+
     }
 
 }
