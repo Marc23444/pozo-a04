@@ -1,2 +1,3 @@
 rootProject.name = 'exercise46'
+include 'test'
 

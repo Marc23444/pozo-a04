@@ -2,5 +2,11 @@
 'https://plantuml.com/class-diagram
 
 Class Solution46
+{
+        +{static}Solution46 : main()
+        -{static}Solution46 : filein()
+        -{static}Solution46 : checkWords(String[] Words)
+        -{static}Solution46 : output(Map<String,Integer> wordMap)
+}
 
 @enduml

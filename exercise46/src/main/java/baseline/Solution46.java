@@ -13,29 +13,92 @@
  */
 package baseline;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+
 public class Solution46 {
 
     //Driver function runs fileIn
     public static void main(String[] args) {
-
+        fileIn();
     }
 
     private static void fileIn()
     {
+        //Opens the file
+        File file = new File("data\\exercise46_input.txt");
+        String words = "";
+
+        //Uses a try catch block to scan through and read the data
+        try(Scanner fileScan = new Scanner(file))
+        {
+            while(fileScan.hasNextLine())
+                words += fileScan.nextLine();
+            String[] wordList = words.split(" ");
+
+            output(checkWords(wordList));
+
+
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
 
     }
 
-    //This will check each word and compare it to every other word to find if its unique or not
-    //Then it will keep track of the amount that word occurs
-    //(Dont really know how im gonna do this yet)
-    private static void checkWords(String[] words)
+    //Returns a map of strings and integers, uses a for loop to update the map
+    public static Map<String,Integer> checkWords(String[] words)
     {
+        //Creates a hashMap called unique words
+        HashMap<String,Integer> uniqueWords = new HashMap<>();
+
+        //Uses a forEach to check each word in the words array and adds them to the map
+        for (String word : words) {
+
+            if (uniqueWords.containsKey(word)) {
+                uniqueWords.put(word, uniqueWords.get(word) + 1);
+
+            } else {
+                uniqueWords.put(word, 1);
+            }
+
+
+        }
+        return uniqueWords;
 
     }
 
-    //Will display data as a histogram, havent figured out how im gonna store the data so theres no param as of now
-    private static void output()
+    //Will display data as a histogram, takes in a HashMap and converts it into 2 Lists in order to properly display the data
+    private static void output(Map<String,Integer> wordMap)
     {
+        //Turns the hashmap wordmap into a list that can be traversed in a foreach loop. It then sorts it
+        List<Map.Entry<String,Integer>> list = new ArrayList<>(wordMap.entrySet());
+        list.sort(Map.Entry.comparingByValue());
+
+        List<String> keys = new ArrayList<>();
+        List<Integer> values = new ArrayList<>();
+
+        //Fills the key and value lists
+        for(Map.Entry<String,Integer> entry : list)
+        {
+            keys.add(entry.getKey());
+            values.add(entry.getValue());
+        }
+
+        //Displays the lists as histograms
+        for (int i = 2; i >=0; i--)
+        {
+            System.out.print(keys.get(i)+": ");
+            for (int j = 0; j < values.get(i); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
 
     }
 
