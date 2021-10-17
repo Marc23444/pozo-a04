@@ -1,12 +1,13 @@
 package baseline;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class Solution45Test {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void checkString() {
-
         Solution45 test = new Solution45();
 
         String[] testString = {"use","utilize","utilize"};
@@ -14,11 +15,9 @@ class Solution45Test {
 
 
 
-        //testString = test.checkString(testString);
+        testString = test.checkString(testString);
 
 
-        assertArrayEquals(testString,finalString);
-
-
+        assertArrayEquals(finalString,testString);
     }
 }

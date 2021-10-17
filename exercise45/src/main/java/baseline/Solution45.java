@@ -58,7 +58,7 @@ public class Solution45 {
 
     //Checks each word in the string and looks for the string "utilize", replaces every
     //instance of utilize with use
-    private static String[] checkString(String[] words)
+    public static String[] checkString(String[] words)
     {
         //Goes through each word in the string and replaces utilize with use
         for (int i = 0; i < words.length; i++) {
