@@ -15,7 +15,7 @@
  */
 package baseline;
 
-public class exercise44 {
+public class Solution44 {
 
     //Driver function, calls input
     public static void main(String[] args) {
