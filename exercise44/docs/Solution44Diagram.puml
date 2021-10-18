@@ -2,5 +2,26 @@
 'https://plantuml.com/sequence-diagram
 
 class Solution44
+{
+    +{static}Solution44 : main()
+    -{static}Solution44 : input()
+    -{static}Solution44 : checkInventory(ArrayList<String> products, String item)
+    -{static}Solution44 : deserializeJson(ArrayList<String> jsonStrings)
+    -{statoc}Solution44 : jsonToString(File file)
+    -{static}Solution44 : output(Product item)
+}
+
+class Product
+{
+    String name
+    int price
+    int quantity
+
+
+
+}
+
+Solution44 "Solution44" *-- Product: contains
+
 
 @enduml
